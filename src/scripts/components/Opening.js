@@ -9,7 +9,7 @@ import logo6 from '../../images/opening/title/6.svg'
 import logo7 from '../../images/opening/title/7.svg'
 import logo8 from '../../images/opening/title/8.svg'
 
-export default () => (
+export default ({ changeChapter }) => (
   <div className="opening">
     <div className="opening__effect"></div>
     <div className="opening__bg opening__bg_type_1">
@@ -34,7 +34,8 @@ export default () => (
       </div>
     </div>
     <div className="opening__bg opening__bg_type_3">
-      <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+      <div onAnimationEnd={changeChapter}></div>
     </div>
   </div>
 )
