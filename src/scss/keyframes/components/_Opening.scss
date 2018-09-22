@@ -1,0 +1,23 @@
+@keyframes opening__show-logo {
+  0%   { transform: scale(15); opacity: 0; }
+  25%  { transform: scale(0.8); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 1; }
+  75%  { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes opening__show-logo__sp {
+  0%   { transform: scale(8); opacity: 1; }
+  25%  { transform: scale(0.8); opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 1; }
+  75%  { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes opening__show-sub {
+  from { transform: scale(15) rotateX(0deg) rotateY(0deg); opacity: 0; }
+  to   { transform: scale(1) rotateX(360deg) rotateY(360deg); opacity: 1; }
+}
+@keyframes opening__press {
+  0%    { transform: scale(1); }
+  50%   { transform: scale(0.92); }
+  100%  { transform: scale(1); }
+}

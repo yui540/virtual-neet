@@ -1,6 +1,6 @@
 import { CHANGE_CHAPTER } from '../constants/opening'
 
-const chapter = 'top'
+const chapter = 'opening'
 const init = {
   chapter
 }

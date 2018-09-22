@@ -1,0 +1,142 @@
+.opening {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+
+/**
+ * effect
+ */
+.opening__effect {
+  position: absolute;
+  top: calc(50% - 35vmin); left: calc(50% - 35vmin);
+  width: 70vmin; height: 70vmin;
+
+  &::before, &::after {
+    content: ""; display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    transform: scale(0);
+  }
+  &::before { background-color: #c45c66; }
+  &::after  { background-color: #fff; }
+}
+
+/**
+ * bg
+ */
+.opening__bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  @include sp-layout { flex-direction: column; }
+
+  div {
+    @include pc-layout { width: 25%; height: 100%; }
+    @include sp-layout { width: 100%; height: 25%; }
+    opacity: 0;
+  }
+}
+.opening__bg_type_1 div { background-color: #49a9a4; }
+.opening__bg_type_2 div { background-color: #c3ce5f; }
+.opening__bg_type_3 div { background-color: #eee; }
+
+/**
+ * logo
+ */
+.opening__logo {
+  position: absolute;
+  top: calc(50% - 6.5vmin); left: calc(50% - 45vmin);
+  width: 90vmin; height: 13vmin;
+
+  .title {
+    width: 90vmin; height: 10vmin;
+    display: flex;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 12vmin;
+      opacity: 0;
+    }
+    img:nth-child(2),
+    img:nth-child(7),
+    img:nth-child(4) { width: 6vmin; }
+    img:nth-child(6) { width: 7vmin; }
+  }
+
+  .sub {
+    width: 90vmin; height: 2vmin;
+    display: flex;
+    flex-direction: row-reverse;
+    transform: translateX(-13%);
+    margin-top: 1vmin;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    img {
+      display: block;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+
+/********************************************************************************
+  animation
+*********************************************************************************/
+.opening__logo {
+  @include pc-layout {
+    .title {
+      img:nth-child(1) { animation: opening__show-logo 0.8s ease 0s forwards; }
+      img:nth-child(2) { animation: opening__show-logo 0.8s ease 0.1s forwards; }
+      img:nth-child(3) { animation: opening__show-logo 0.8s ease 0.2s forwards; }
+      img:nth-child(4) { animation: opening__show-logo 0.8s ease 0.3s forwards; }
+      img:nth-child(5) { animation: opening__show-logo 0.8s ease 0.4s forwards; }
+      img:nth-child(6) { animation: opening__show-logo 0.8s ease 0.5s forwards; }
+      img:nth-child(7) { animation: opening__show-logo 0.8s ease 0.6s forwards; }
+      img:nth-child(8) { animation: opening__show-logo 0.8s ease 0.7s forwards; }
+    }
+  }
+  @include sp-layout {
+    .title {
+      img:nth-child(1) { animation: opening__show-logo__sp 0.8s ease 0s forwards; }
+      img:nth-child(2) { animation: opening__show-logo__sp 0.8s ease 0.1s forwards; }
+      img:nth-child(3) { animation: opening__show-logo__sp 0.8s ease 0.2s forwards; }
+      img:nth-child(4) { animation: opening__show-logo__sp 0.8s ease 0.3s forwards; }
+      img:nth-child(5) { animation: opening__show-logo__sp 0.8s ease 0.4s forwards; }
+      img:nth-child(6) { animation: opening__show-logo__sp 0.8s ease 0.5s forwards; }
+      img:nth-child(7) { animation: opening__show-logo__sp 0.8s ease 0.6s forwards; }
+      img:nth-child(8) { animation: opening__show-logo__sp 0.8s ease 0.7s forwards; }
+    }
+  }
+  .sub img { animation: opening__show-sub 0.8s cubic-bezier(0.1, 0.42, 0.04, 1) 1s forwards; }
+  animation: opening__press 0.8s cubic-bezier(0.03, 0.15, 0, 1.01) 1.7s forwards;
+}
+.opening__effect {
+  animation: -turn1 0.6s ease 1.7s forwards;
+  &::before { animation: scale0-1 0.5s ease 1.7s forwards; }
+  &::after  { animation: scale0-1 0.5s ease 1.8s forwards; }
+}
+.opening__bg_type_1 {
+  div:nth-child(1) { animation: fadein 0.04s linear 2.2s 3 alternate forwards; }
+  div:nth-child(2) { animation: fadein 0.04s linear 2.3s 3 alternate forwards; }
+  div:nth-child(3) { animation: fadein 0.04s linear 2.4s 3 alternate forwards; }
+  div:nth-child(4) { animation: fadein 0.04s linear 2.5s 3 alternate forwards; }
+}
+.opening__bg_type_2 {
+  div:nth-child(4) { animation: fadein 0.04s linear 2.7s 3 alternate forwards; }
+  div:nth-child(3) { animation: fadein 0.04s linear 2.8s 3 alternate forwards; }
+  div:nth-child(2) { animation: fadein 0.04s linear 2.9s 3 alternate forwards; }
+  div:nth-child(1) { animation: fadein 0.04s linear 3.0s 3 alternate forwards; }
+}
+.opening__bg_type_3 {
+  div:nth-child(1) { animation: fadein 0.04s linear 3.2s 3 alternate forwards; }
+  div:nth-child(2) { animation: fadein 0.04s linear 3.3s 3 alternate forwards; }
+  div:nth-child(3) { animation: fadein 0.04s linear 3.4s 3 alternate forwards; }
+  div:nth-child(4) { animation: fadein 0.04s linear 3.5s 3 alternate forwards; }
+}
