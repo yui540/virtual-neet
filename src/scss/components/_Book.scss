@@ -1,0 +1,232 @@
+.book {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+
+  &::after {
+    content: ""; display: block;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-image: url(../images/book/girl.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+    opacity: 0;
+    @include pc-layout { width: 250px; height: 250px; }
+    @include sp-layout { width: 125px; height: 125px; }
+  }
+}
+
+/**
+ * bg
+ */
+.book__bg {
+  position: absolute;
+  opacity: 0;
+  @include pc-layout {
+    top: 20px; left: 20px;
+    width: calc(100% - 40px); height: calc(100% - 40px);
+  }
+  @include sp-layout {
+    top: 10px; left: 10px;
+    width: calc(100% - 20px); height: calc(100% - 20px);
+  }
+
+  &::before, &::after {
+    content: ""; display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+  }
+  &::before {
+    background-image: url(../images/top/bg.svg);
+    background-size: 30px;
+    background-position: center;
+    opacity: 0.6;
+  }
+  &::after { border: dashed 3px #aaa; }
+}
+
+/**
+ * body
+ */
+.book__body {
+  position: absolute;
+  overflow: auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  @include pc-layout {
+    left: 40px; top: 40px;
+    width: calc(100% - 80px); height: calc(100% - 80px);
+  }
+  @include sp-layout {
+    -webkit-overflow-scrolling: touch;
+    left: 20px; top: 20px;
+    width: calc(100% - 40px); height: calc(100% - 40px);
+  }
+
+  .title {
+    display: block;
+    opacity: 0;
+    @include pc-layout { height: 70px; margin: 60px auto; }
+    @include sp-layout { width: 90%; margin: 65px auto; }
+  }
+
+  .content {
+    margin-bottom: 200px;
+    opacity: 0;
+    @include sp-layout { flex-direction: column; align-items: center; }
+    
+    p {
+      line-height: 2.5;
+      @include pc-layout { font-size: 16px; text-align: center; }
+      @include sp-layout { font-size: 14px; padding: 0 20px; box-sizing: border-box; }
+    }
+
+    .btn {
+      display: block;
+      color: #fff;
+      background-color: #d25464;
+      border-radius: 5px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 30px;
+      transition: all 0.5s ease 0s;
+      @include pc-layout {
+        width: 400px;
+        font-size: 26px;
+        line-height: 55px;
+      }
+      @include sp-layout {
+        width: 80%;
+        font-size: 20px;
+        line-height: 45px;
+      }
+    }
+    .btn:hover { transform: scale(1.1); }
+
+    .imgs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+
+      img {
+        display: block;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        transition: all 0.5s ease 0s;
+        @include pc-layout { height: 350px; margin: 20px; }
+        @include sp-layout { width: 90%; margin: 20px auto; }
+      }
+      img:hover { transform: scale(1.1); }
+    }
+
+    .sub-title {
+      margin: 0 auto;
+      margin-top: 60px;
+      text-align: center;
+      color: #666;
+      border-top: dashed 1px #666;
+      border-bottom: dashed 1px #666;
+      @include pc-layout {
+        width: 700px;
+        font-size: 30px;
+        padding: 10px 0;
+      }
+      @include sp-layout {
+        width: 90%;
+        font-size: 25px;
+        padding: 6px 0;
+      }
+    }
+
+    .editor {
+      background-color: #eee;
+      margin: 30px auto;
+      padding: 5px 0;
+      @include pc-layout { width: 500px; }
+      @include sp-layout { width: 85%; }
+
+      p:nth-child(1) {
+        text-align: center;
+        border-bottom: solid 2px #fff;
+        padding-bottom: 5px;
+        @include pc-layout { font-size: 18px; }
+        @include sp-layout { font-size: 12px; }
+      }
+      p:nth-child(2) {
+        text-align: center;
+        padding-top: 5px;
+        @include pc-layout { font-size: 14px; }
+        @include sp-layout { font-size: 10px; }
+      }
+    }
+
+    .info {
+      margin-top: 30px;
+
+      p {
+        background-color: #eee;
+        padding: 5px;
+        text-align: center;
+        margin: 10px auto;
+        @include pc-layout {
+          width: 500px;
+          font-size: 14px;
+        }
+        @include sp-layout {
+          width: 85%;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * close-btn
+ */
+.book__close-btn {
+  position: absolute;
+  right: 0; top: 0;
+  border-bottom-left-radius: 8px;
+  opacity: 0;
+  background-color: #fff;
+  @include pc-layout {
+    width: 120px; height: 120px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  @include sp-layout {
+    width: 70px; height: 70px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+
+  &::before, &::after {
+    content: ""; display: block;
+    position: absolute;
+    top: calc(50% - 1px); left: 20%;
+    width: 60%; height: 2px;
+    background-color: #999;
+  }
+  &::before { transform: rotate(45deg); }
+  &::after  { transform: rotate(-45deg); }
+}
+
+
+/*****************************************************************************
+  animation
+******************************************************************************/
+.book__bg { animation: fadein 0.8s ease 0s forwards; }
+.book__body {
+  .title { animation: member_show-title 0.8s cubic-bezier(0.11, 0.4, 0.08, 1.01) 0.6s forwards; }
+  .content { animation: fadein 1.6s ease 1.4s forwards; }
+}
+.book__close-btn { animation: fadein 0.6s ease 3s forwards; }
+.book::after {
+  animation:
+    fadein 0.6s ease 3s forwards,
+    member__jump 2s ease-in-out 3.6s infinite;
+}
