@@ -35,7 +35,7 @@ export default ({
             </a>
           </div>
           <p>様々な分野の技術が１冊に詰まった、ごった煮技術書がここに登場！</p>
-          <p>Webを始め、CSSアニメーション、ゲーム、3DCC、ミュージック、イラストなど</p>
+          <p>Webを始め、CSSアニメーション、ゲーム、3DCG、ミュージック、イラストなど</p>
           <p>様々な分野において技術を磨いている8人で１冊を書き上げた大変ボリューミーな本になっています！</p>
           <p>様々な技術や業界に興味がある人は是非お手にとってご覧ください。</p>
           <a className="btn" href="https://techbookfest.org/event/tbf05/circle/47180004" rel="noopener noreferrer" target="_blank">チェックリストに追加する</a>
