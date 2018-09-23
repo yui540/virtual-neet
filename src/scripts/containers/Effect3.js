@@ -1,19 +1,12 @@
 import { connect } from 'react-redux'
-import Top from '../components/Top'
-import { openMenu, closeMenu } from '../actions/menu'
 import { changeAnimation } from '../actions/animation'
+import Effect3 from '../components/Effect3'
 
 const mapStateToProps = state => ({
-  menu: state.menu.state
+  num: state.animation.num
 })
 
 const mapDispatchToProps = dispatch => ({
-  openMenu() {
-    dispatch(openMenu())
-  },
-  closeMenu() {
-    dispatch(closeMenu())
-  },
   changeAnimation() {
     dispatch(changeAnimation('eff-1'))
   }
@@ -22,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Top)
+)(Effect3)

@@ -1,0 +1,1 @@
+export const CHANGE_ANIMATION = 'CHANGE_ANIMATION'
