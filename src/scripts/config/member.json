@@ -1,0 +1,60 @@
+[
+  {
+    "name": "おりばー",
+    "icon": "./images/member/oliver.jpg",
+    "message": "Webをメインで開発しているエンジニアです。色々作ってます。",
+    "link": {
+      "twitter": "https://twitter.com/oliver_diary"
+    }
+  },
+  {
+    "name": "吉武 ニキータ",
+    "icon": "./images/member/niki.jpg",
+    "message": "3DCGのテクニカルアーティストです。メインツールはmayaです。",
+    "link": {
+      "web": "https://nikiprofile.com"
+    }
+  },
+  {
+    "name": "Amemiya",
+    "icon": "./images/member/amemiya.jpg",
+    "message": "サウンドエンジニアです。バーチャルユーチューバーが好きです。",
+    "link": {}
+  },
+  {
+    "name": "Kou",
+    "icon": "./images/member/kou.jpg",
+    "message": "サウンドデザイナーです。SEやMAを作ります。",
+    "link": {}
+  },
+  {
+    "name": "トム",
+    "icon": "./images/member/tomd.jpg",
+    "message": "絵を描くデザイナーです。唐辛子が好きです。",
+    "link": {
+      "twitter": "https://twitter.com/_tomd4"
+    }
+  },
+  {
+    "name": "菅沼 泰",
+    "icon": "./images/member/suganuma.jpg",
+    "message": "ゲームプログラマーです。来年から石川県で働きます。",
+    "link": {}
+  },
+  {
+    "name": "喜多 隼人",
+    "icon": "./images/member/kita.jpg",
+    "message": "CGの人です。VFXやってます。生きてます。",
+    "link": {}
+  },
+  {
+    "name": "yui540",
+    "icon": "./images/member/yui540.jpg",
+    "message": "『臆病な魔女は、Webサイトに魔法をかけた。』",
+    "link": {
+      "twitter": "https://twitter.com/yui540",
+      "github": "https://github.com/yui540",
+      "web": "https://yui540.graphics"
+    }
+  }
+]

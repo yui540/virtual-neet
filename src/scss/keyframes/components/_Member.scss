@@ -1,0 +1,10 @@
+@keyframes member_show-title {
+  from { transform: scale(8) rotateX(0deg) rotateY(200deg); opacity: 0; }
+  to   { transform: scale(1) rotateX(0deg) rotateY(360deg); opacity: 1; }
+}
+@keyframes member__jump {
+  0%   { transform: rotateY(180deg) translateY(0%); }
+  85%  { transform: rotateY(180deg) translateY(0%); animation-timing-function: ease; }
+  95%  { transform: rotateY(180deg) translateY(-20%); }
+  100% { transform: rotateY(180deg) translateY(0%); }
+}
