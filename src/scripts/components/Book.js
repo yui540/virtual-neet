@@ -70,7 +70,7 @@ export default ({
               <p>著:菅沼 泰</p>
             </div>
             <div className="editor">
-              <p>Rails と PWA で作る 簡単 Web サービス！</p>
+              <p>RailsとPWAで作る簡単Webサービス！</p>
               <p>著:おりばー</p>
             </div>
           </div>
