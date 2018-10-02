@@ -4,7 +4,8 @@
     "icon": "./images/member/oliver.jpg",
     "message": "Webをメインで開発しているエンジニアです。色々作ってます。",
     "link": {
-      "twitter": "https://twitter.com/oliver_diary"
+      "twitter": "https://twitter.com/oliver_diary",
+      "github": "https://github.com/minakawa-daiki"
     }
   },
   {
